@@ -13,7 +13,7 @@ text-align: left;
 margin: 0 2rem;
 color: var(--pri-accent-color);
 border: 1px solid var(--pri-accent-color-dark);
-padding: 0.5rem 1rem;
+padding: 0.5rem 0.5rem;
 border-top-left-radius: 10px;
 border-bottom-right-radius: 10px;
 font-size: 0.25rem;
@@ -52,6 +52,7 @@ border-radius: 10px;
   background: transparent;
   color: var(--pri-font-color);
   padding: 0.5rem;
+  overflow: hidden;
 }
 .search-input:focus {
   border: none;
