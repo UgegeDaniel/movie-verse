@@ -10,7 +10,7 @@ return(
 	<div className='header-right'>
 	<div className='search-bar'>
 	<FaSearch className='search'/>
-	<input className='search-input' placeholder="search your favorite movie" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)}/>
+	<input className='search-input' placeholder="search" value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)}/>
 </div>
 	</div>
 </header>
