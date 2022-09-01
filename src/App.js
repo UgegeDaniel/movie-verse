@@ -9,8 +9,7 @@ const [type, setType] = useState({tv:"movie", movieId:""})
 const [movieInfo, setMovieInfo] = useState({show:false, movie:{}})
 const [allMovies, setAllMovies] = useState([])
 const [filteredMovies, setFilteredMovies]= useState([])
-
-  const {loading} = useFetch();
+const {loading} = useFetch();
   const { data: trending } = useFetch('/trending/all/day')
   const { data: topRated } = useFetch('/movie/top_rated')
   const { data: airingToday } = useFetch('/tv/airing_today')
