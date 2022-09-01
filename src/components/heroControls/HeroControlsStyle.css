@@ -1,0 +1,50 @@
+.hero-controls{
+display:flex;
+justify-content: space-between;
+align-items: center;
+color: var(--pri-font-color-light);
+max-width: 95%;
+margin: 0 2rem;
+padding: 1rem 3rem;
+}
+
+.hero-controls > * {
+position: relative;
+z-index: 3;
+}
+.hero-controls > span{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: var(--pri-accent-color);
+}
+
+.hero-controls > span > svg {
+font-size: 1.5rem;
+margin-bottom: 0.5rem;
+color: var(--pri-accent-color);
+font-weight: bold;
+}
+
+button{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 0.5rem;
+padding: 0.5rem 0.25rem;
+border-radius: 5px;
+cursor: pointer;
+min-width: 7rem;
+border: 1px solid var(--pri-accent-color);
+background-color: var(--pri-accent-color);
+transition: var(--transition);
+color: var(--pri-font-color);
+background-color: var(--pri-accent-color);
+}
+button:hover{
+color: var(--pri-font-color-light);
+background-color: transparent;
+}
+
+
