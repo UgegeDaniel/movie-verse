@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: none;
     color: var(--pri-font-color-light);
     max-width: 95%;
     margin: 0 2rem;
@@ -10,7 +11,7 @@
 
 .hero-controls>* {
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 
 .hero-controls>span {
