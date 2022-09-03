@@ -1,4 +1,4 @@
-const handleGenre = (name, id, movieArray, onResult) => {
+const handleGenre = (id, movieArray, onResult) => {
 const filterResult = movieArray?.filter((movie)=>movie.genre_ids.includes(id));
 onResult(filterResult)
 }
