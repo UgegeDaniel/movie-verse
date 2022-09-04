@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import './HeroMovieStyle.css'
 import { GoPrimitiveDot } from 'react-icons/go'
-const HeroMovie = ({ movie }) => {
+const HeroMovie = ({ movie, isMobile }) => {
 	const base_url = 'https://image.tmdb.org/t/p/original'
 	const poster = movie ? `${base_url}${movie.backdrop_path}` : ''
 	return (
@@ -21,6 +21,6 @@ const HeroMovie = ({ movie }) => {
 	)
 }
 HeroMovie.propTypes = {
-	movie: PropTypes.object
+	movie: PropTypes.object,
 }
 export default HeroMovie
