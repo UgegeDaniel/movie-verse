@@ -68,8 +68,9 @@ border-radius: 10px;
 .search{
 color: var(--pri-accent-color);
 width: 2rem;
+height: 2rem;
 margin-left: 0.25rem;
 }
-.search:hover .search-bar{
+ .search-bar:hover{
   width: 5rem;
 }
