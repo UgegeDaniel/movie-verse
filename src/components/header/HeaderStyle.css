@@ -72,8 +72,8 @@ height: 100%;
 margin-left: 0.25rem;
 }
  .search-bar:hover{
-  width: 10rem;
+  width: 12rem;
 }
-.search-bar: hover search-input{
+.search-bar:hover > .search-input{
   disply: inline-block;
  }
