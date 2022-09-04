@@ -12,7 +12,7 @@ const HeroMovie = ({ movie, isMobile }) => {
 				<h3 className='movie-title'>{movie?.name || movie?.title}</h3>
 				<h6 className='year'>{movie?.release_date || movie?.first_air_date}</h6>
 				<h6 className="pg">{movie?.adult ? '18+' : 'PG'}</h6>
-				<p className='overview'>{movie?.overview.substring(0, 250)}</p>
+				{!isMobile && <p className='overview'>{movie?.overview.substring(0, 250)}</p>}
 				<div className='keywords'>
 					<span>Dystopian<GoPrimitiveDot /></span>
 				</div>
@@ -22,5 +22,6 @@ const HeroMovie = ({ movie, isMobile }) => {
 }
 HeroMovie.propTypes = {
 	movie: PropTypes.object,
+	isMobile: PropTypes.bool
 }
 export default HeroMovie
