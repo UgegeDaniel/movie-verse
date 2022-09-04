@@ -44,7 +44,6 @@ background: transparent;
 transition: all 300ms linear;
 border: none;
 border-bottom: 1px solid var(--pri-accent-color-dark);
-border: 2px solid red;
 margin: 0 1rem;
 border-radius: 10px;
   max-width: 40%;
@@ -67,10 +66,10 @@ border-radius: 10px;
 
 .search{
 color: var(--pri-accent-color);
-width: 2rem;
-height: 2rem;
+width: 15px;
+height: 15px;
 margin-left: 0.25rem;
 }
  .search-bar:hover{
-  width: 5rem;
+  width: 10rem;
 }
