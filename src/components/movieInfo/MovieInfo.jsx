@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { FaTimes } from 'react-icons/fa'
 import { BsPlayFill } from 'react-icons/bs'
 import './MovieInfoStyle.css'
-const MovieInfo = ({ movie, setMovieInfo, setType, trailerUrl }) => {
+const MovieInfo = ({ movie, setMovieInfo, setType, trailerUrl, isMobile }) => {
 	const base_url = 'https://image.tmdb.org/t/p/original'
 	const poster = movie ? `${base_url}${movie.poster_path}` : ''
 	const { id, title, name, overview, release_date, first_air_date, adult, media_type, } = movie
