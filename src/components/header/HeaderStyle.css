@@ -55,7 +55,6 @@ border-radius: 10px;
   border: none;
   background: transparent;
   color: var(--pri-font-color);
-  padding: 0.1rem;
   overflow: hidden;
   width: 0px;
 }
