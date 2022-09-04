@@ -30,6 +30,17 @@ const getTrailer = (videos) => {
 useEffect(()=>{
 setAllMovies(allMovies.concat(trending, topRated, airingToday))
 }, [trending, topRated, airingToday])
+
+useEffect(()=>{
+ const handleResize = () => setScreenSize(window.innerWidth);  
+ window.addEventListener('resize', handleResize);
+ handleResize();
+ return ()=> window.removeEventListener('resize', handleResize) 
+}, [])
+
+useEffect(()=>{
+  (screenSize > 600) ? setIsMobile(false) : setIsMobile(true)
+ }, [screenSize])
   
 const randomHeroMovie = randomMovie(allMovies)
 const trailerUrl = getTrailer(trailers)
@@ -38,7 +49,7 @@ const trailerUrl = getTrailer(trailers)
     <div className='App'>
      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
      <Categories handleGenre={handleGenre} genres={genres}/>
-     <HeroMovie movie={randomHeroMovie}/>
+     <HeroMovie movie={randomHeroMovie} isMobile={isMobile}/>
      <HeroControls/>
      {searchTerm ?
        <MovieList title='Search Results' movies={searchResults} setMovieInfo={setMovieInfo}/>
@@ -51,7 +62,7 @@ const trailerUrl = getTrailer(trailers)
      <MovieList title='Upcoming Movies' movies={upComing} setMovieInfo={setMovieInfo}/>
      <MovieList title='In Cinemas Now' movies={nowPlaying} setMovieInfo={setMovieInfo}/>
      {movieInfo.show && 
-       <MovieInfo movie={movieInfo.movie} setMovieInfo={setMovieInfo} setType={setType} trailerUrl={trailerUrl}/>
+       <MovieInfo movie={movieInfo.movie} setMovieInfo={setMovieInfo} setType={setType} trailerUrl={trailerUrl} isMobile={isMobile}/>
       }
     </div>
   )
