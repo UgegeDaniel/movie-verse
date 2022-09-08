@@ -6,6 +6,7 @@ const BASE_URL = 'https://api.themoviedb.org/3'
 const useFetch = (urlParams) => {
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
+  
 
  const fetchMovies= async (url) => {
     setLoading(true);    
@@ -27,4 +28,3 @@ const useFetch = (urlParams) => {
 }
 
 export default useFetch
-

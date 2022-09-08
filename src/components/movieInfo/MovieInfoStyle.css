@@ -8,7 +8,7 @@ footer {
     margin: 0 0.5rem;
     padding: 2rem;
     height: 270px;
-    max-width: 1190px;
+    max-width: 100vw;
     overflow: none;
     background-color: var(--pri-accent-color);
 }
@@ -79,4 +79,9 @@ footer {
     width: 100%;
     height: 7rem;
     overflow: hidden;
+}
+
+button > a {
+    text-decoration: none;
+    color: var(--pri-accent-color);
 }

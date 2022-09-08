@@ -101,3 +101,10 @@ button {
     outline: none;
     cursor: pointer;
 }
+
+.bottom::after {
+    content: '';
+    height: 100%;
+    width: 100vw;
+    background-color: var(--pri-bg-color);
+}

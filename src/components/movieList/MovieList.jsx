@@ -20,7 +20,6 @@ const MovieList = ({ title, movies, setMovieInfo }) => {
                             {media_type === 'tv' &&
                                 <span className='new-episodes'>NEW EPISODES</span>
                             }
-
                         </div>
                     )
                 })}
