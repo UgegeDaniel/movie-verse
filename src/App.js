@@ -31,7 +31,10 @@ useEffect(()=>{
 setAllMovies([...allMovies, ...trending, ...topRated, ...airingToday])
 }, [trending, topRated, airingToday])
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
 useEffect(()=>{
  const handleResize = () => setScreenSize(window.innerWidth);  
  window.addEventListener('resize', handleResize);
@@ -51,6 +54,10 @@ const trailerUrl = getTrailer(trailers)
      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
      <Categories handleGenre={handleGenre} genres={genres}/>
      <HeroMovie movie={randomHeroMovie} isMobile={isMobile}/>
+<<<<<<< HEAD
+=======
+     <HeroControls/>
+>>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
      {searchTerm ?
        <MovieList title='Search Results' movies={searchResults} setMovieInfo={setMovieInfo}/>
      : (filteredMovies.length > 0) &&
@@ -63,9 +70,17 @@ const trailerUrl = getTrailer(trailers)
      <MovieList title='In Cinemas Now' movies={nowPlaying} setMovieInfo={setMovieInfo}/>
      {movieInfo.show && 
        <MovieInfo movie={movieInfo.movie} setMovieInfo={setMovieInfo} setType={setType} trailerUrl={trailerUrl} isMobile={isMobile}/>
+<<<<<<< HEAD
     }
       {movieInfo.show && <div className='bottom'></div>}
     </div>
   )
 }
 export default App
+=======
+      }
+    </div>
+  )
+}
+export default App
+>>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f

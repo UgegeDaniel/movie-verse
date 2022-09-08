@@ -31,6 +31,7 @@ header>div {
   align-items: center;
 }
 
+<<<<<<< HEAD
 .search-bar {
   background: transparent;
   display: flex;
@@ -39,6 +40,18 @@ header>div {
   padding: 0.75rem 0.5rem;
   margin: 0 1rem;
   border-radius: 10px;
+=======
+.search-bar{
+display: flex;
+width: 2rem;
+height: 2rem;
+border-radius: 20px;
+background: transparent;
+transition: all 300ms linear;
+border: none;
+border-bottom: 1px solid var(--pri-accent-color-dark);
+border-radius: 10px;
+>>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
   max-width: 40%;
   overflow: none;
 }
@@ -51,8 +64,8 @@ header>div {
   border: none;
   background: transparent;
   color: var(--pri-font-color);
-  padding: 0.1rem;
   overflow: hidden;
+  width: 0px;
 }
 
 .search-input:focus {
@@ -60,6 +73,7 @@ header>div {
   outline: none;
 }
 
+<<<<<<< HEAD
 .search {
   margin-top: 0.85rem;
   margin-bottom: -0.25rem;
@@ -69,8 +83,22 @@ header>div {
 
 .search:hover .search-input {
   display: block;
+=======
+.search{
+color: var(--pri-accent-color);
+width: 100%;
+height: 100%;
+margin-left: 0.25rem;
 }
+ .search-bar:hover{
+  width: 12rem;
+>>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
+}
+.search-bar:hover > .search-input{
+  width: 10rem;
+ }
 
+<<<<<<< HEAD
 @media screen and (min-width: 600px) {
   .search-bar {
     min-width: 10rem;
@@ -84,3 +112,9 @@ header>div {
     margin-bottom: 0.2rem
   }
 }
+=======
+.search-bar:hover > .search {
+  width: 1.25rem;
+  height: 1.25rem;
+  }
+>>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
