@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import './HeroMovieStyle.css'
 import { GoPrimitiveDot } from 'react-icons/go'
-<<<<<<< HEAD
-const HeroMovie = ({ movie, isMobile}) => {
-=======
+
 const HeroMovie = ({ movie, isMobile }) => {
->>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
+
 	const base_url = 'https://image.tmdb.org/t/p/original'
 	const poster = movie ? `${base_url}${movie.backdrop_path}` : ''
 	return (
@@ -16,14 +14,11 @@ const HeroMovie = ({ movie, isMobile }) => {
 				<h3 className='movie-title'>{movie?.name || movie?.title}</h3>
 				<h6 className='year'>{movie?.release_date || movie?.first_air_date}</h6>
 				<h6 className="pg">{movie?.adult ? '18+' : 'PG'}</h6>
-<<<<<<< HEAD
 				 {!isMobile && <>
 				 <p className='overview'>{movie?.overview.substring(0, 250)}</p>
 				{/* <div className='keywords'>
-=======
 				{!isMobile && <p className='overview'>{movie?.overview.substring(0, 250)}</p>}
 				<div className='keywords'>
->>>>>>> 23a5fc8dcb3461ccb5da88f6b1a5a44181e3201f
 					<span>Dystopian<GoPrimitiveDot /></span>
 				</div> */}
 				</>
