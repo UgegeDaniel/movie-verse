@@ -1,63 +1,123 @@
-# Movie Verse
+# Moviemania
 
-This is a simple React app that displays lists of trending, upcoming movies etc. Users can watch official trailer of any movie of their choice.
+This is an Angular app to help people search through movies by categories, search for specific movies and preview movie details. Its a simple app to demostrate the basic features of the angular framework.
 
 ## Table of Contents
-1. Movie Features
-2. Built with
-3. Mock Designs
-4. Live Preview
-5. Required Installations
-6. Installation of This App
-7. License
-8. Contact
-9. Acknowledgements
 
+- [Movie Features](#movie-features)
+- [Concepts and Apis Employed](#concepts-and-apis-employed)
+- [Built with](#built-with)
+- [Mock Designs](#mock-designs)
+- [Live Preview](#live-preview)
+- [Required Installations](#required-installations)
+- [Installation of This App](#instalation)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+<!-- Movie features -->
+
+## Movie Features
+
+- A user upon visiting the app, sees a list of movies in various categories with an option to view more apps in a particular category.
+- Users can also preview a specific movie to see more details.
+
+<!-- concepts and apis employed -->
+
+## Concepts and APIs Employed
+
+- The API employed for movie information was gotten developed by TMDB [here](https://www.themoviedb.org/).
+- Official API documentation for the movie db can be found [here](https://developers.themoviedb.org/3)
+- This app demonstrates the use of basic concepts of Angular Application 
+  - Modules
+  - Compnents structuring 
+  - Shared components
+  - Pipes
+  - Guards
+  - Routing
+  - Two way binding 
+  - Services 
+  - HttpModule
+  - rxjs (Observables)
+
+<!-- BUILT wITH -->
+
+## Built with
+
+- HTML5
+- CSS3
+- JavaScript
+- Angular
+
+<!-- MOCK DESIGNS -->
+
+## Mock Designs
+
+See mock design guides for the app below;
+
+- Home Screen.
+![Image](/src/assets/mocks/home-screen.png)
+- Movie Category List Screen.
+![Image](/src/assets/mocks/category-screen.png)
+- Single Movie View Screen.
+![Image](/src/assets/mocks/single-view-screen.png)
+
+<!-- LIVE PREVIEW -->
 
 ## Live Preview
-Find the live version here. 
 
-
-
+Find the live version [here](https://moviemania-app.netlify.app/).
 Below is a screenshot of what it looks like.
 
+https://user-images.githubusercontent.com/31358867/142187908-396f7f76-3304-4818-851b-148cf93bfec9.mp4
+
+
+<!-- REQUIRED INSTALLATION -->
 
 ## Required Installations
 
-Npm
+- Npm
 
-Once you have installed the required packages shown on the Required Installations, proceed with the following steps :
+<!-- INSTALLATION -->
 
-* Clone this Repository
+## Installation of This Repository
 
-`
-git clone https://github.com/UgegeDaniel/task-tracker-v2.git
-`
+Once you have installed the required packages shown on the [Required Installations](#required-installations), proceed with the following steps
 
-* Move to the downloaded folder
+Clone the Repository
 
-`cd task-tracker-v2
-`
+```Shell
+your@pc:~$ git clone git@github.com:frankly034/moviemania-app.git
+```
 
-* Install all packages
+Move to the downloaded folder
 
-`npm install
-`
+```Shell
+your@pc:~$ cd moviemania
+```
 
-* Open the app
+Install all packages
 
-`
-npm start
-`
+```Shell
+your@pc:~$ npm install
+```
+
+Open the app
+
+```Shell
+your@pc:~$ npm start
+```
 
 ## License
-Distributed under the MIT License. 
 
-See LICENSE for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### Contact
-🇳🇬 Ugege Daniel - ugege@gmail.com | [Github Account](https://github.com/UgegeDaniel) | [Twitter](https://twitter.com/home) | [Linkedin](https://linkedin.com/in/daniel-ugege-50a499227) |
+<!-- CONTACT -->
 
-### Acknowledgements
+## Contact
 
-Javascript Mastery, Lewis Ugege and God Almighty .
+- 🇳🇬 Lewis Ugege - franklynugege@gmail.com | [Github Account](https://github.com/frankly034) | [Twitter](https://twitter.com/@wizlulu) | [Linkedin](https://linkedin.com/in/lewis-ugege) | 
+
+## Acknowledgements
+
+- <a href="https://www.themoviedb.org/"> TMDB</a> and God Almighty .
