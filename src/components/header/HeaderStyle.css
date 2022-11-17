@@ -10,7 +10,7 @@ header {
   margin: 0 2rem;
   padding: -2.5rem 0.5rem;
   color: var(--pri-accent-color);
-  font-size: 0.25rem;
+  font-size: 0.5rem;
   max-width: 20%;
 }
 
@@ -20,69 +20,74 @@ header {
   padding: -2.5rem 0.5rem;
 }
 
-header img {
-  height: 60px;
-  width: 60px;
-}
 
 header>div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.search-bar{
-display: flex;
-width: 2rem;
-height: 2rem;
-border-radius: 20px;
-background: transparent;
-transition: all 300ms linear;
-border: none;
-border-bottom: 1px solid var(--pri-accent-color-dark);
-border-radius: 10px;
-  max-width: 40%;
-  overflow: none;
+
+.box {
+  position: relative;
 }
 
-.search-input {
-  height: 1rem;
-  margin-left: 0.2rem;
-  margin-top: 0.75rem;
-  margin-bottom: -0.25rem;
-  border: none;
-  background: transparent;
-  color: var(--pri-font-color);
-  overflow: hidden;
-  width: 0px;
-}
-
-.search-input:focus {
-  border: none;
+.input {
+  padding: 10px;
+  width: 40px;
+  max-height: 40px;
+  background: none;
+  border: 4px solid var(--pri-accent-color);
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--pri-accent-color);
   outline: none;
+  transition: .5s;
 }
 
-.search {
-  margin-top: 0.85rem;
-  margin-bottom: -0.25rem;
-  font-size: 30px;
-  color: var(--pri-accent-color)
+.box:hover input {
+  width: 240px;
+  background: var(--sec-bg-color);
+  border-radius: 10px;
 }
 
-.search:hover .search-input {
-  display: block;
+.box svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: var(--pri-accent-color);
+  transition: .2s;
 }
-.search-bar:hover > .search-input{
-  width: 10rem;
- }
+
+.box:hover svg {
+  opacity: 0;
+  z-index: -1;
+}
+
+.headline {
+  color: var(--pri-accent-color);
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 3rem;
+  background: var(--sec-bg-color);
+}
 
 @media screen and (min-width: 600px) {
   .search-bar {
     min-width: 10rem;
   }
+
   .search {
     font-size: 15px;
     margin-right: 0.75rem;
   }
+
   .title h1 {
     font-size: 1.5rem;
     margin-bottom: 0.2rem

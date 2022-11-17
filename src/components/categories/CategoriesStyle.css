@@ -31,3 +31,7 @@
     background-color: var(--pri-accent-color);
     color: var(--pri-font-color);
 }
+.current {
+    background-color: var(--pri-accent-color);
+    color: var(--pri-font-color);
+}
