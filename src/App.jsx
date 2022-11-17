@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import {
-  Header, Categories, MovieList, MovieInfo, HeroMovie
+  Header, Categories, MovieList, MovieInfo, HeroMovie, VideoPlayback
 } from './components';
 import {
-  useFetch, useSearch, useTrailers, useGenres
+  useFetch, useSearch, useGenres, useTrailers
 } from './hooks';
-import { handleGenre, randomMovie } from './utils';
+import { randomMovie } from './utils';
 import { urlParams } from './constants'
 
 
@@ -14,23 +14,22 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentGenre, setCurrentGenre] = useState({ id: null, name: 'all' })
   const [filteredMovies, setFilteredMovies] = useState([])
-  // const [type, setType] = useState({ tv: 'movie', movieId: '' });
   const [movieInfo, setMovieInfo] = useState({ show: false, movie: {} });
+  const [showTrailer, setShowTrailer] = useState(false);
   const { movieList } = useFetch(urlParams);
   const { searchResults } = useSearch(searchTerm);
   const { genres } = useGenres()
-  // const { data: trailers } = useTrailers(`/${type.tv}/${type.movieId}`);
-
-  // const getTrailer = (videos) => {
-  //   const officialTrailer = videos?.find((video) => video.name === 'Official Trailer');
-  //   const url = `https://www.youtube.com/watch?v=${officialTrailer?.key}`;
-  //   return url;
-  // };
-
+  const [currentId, setCurrentId] = useState(null)
+  const trailer = useTrailers(currentId)
   const allMovies = [...new Set(movieList.map((item) => item.movies).flat(1))]
   const randomHeroMovie = randomMovie(allMovies)
   useEffect(() => {
-    setFilteredMovies(allMovies.filter((movie) => movie.genre_ids.includes(currentGenre.id)))
+    currentGenre.id
+      && setFilteredMovies(
+        allMovies.filter((movie) =>
+          movie.genre_ids.includes(currentGenre.id))
+          )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentGenre.id])
   useEffect(() => {
     console.log({ randomHeroMovie })
@@ -43,7 +42,7 @@ function App() {
       <div className="movielist-container">
         {
           (searchTerm && searchResults.length > 0)
-          && <MovieList title="Search Results" movies={searchResults} setMovieInfo={setMovieInfo} />
+          && <MovieList title={`Search Results for '${searchTerm}'`} movies={searchResults} setMovieInfo={setMovieInfo} />
         }
         {
           (currentGenre.id)
@@ -60,9 +59,10 @@ function App() {
         movie={movieInfo.movie}
         genres={genres}
         setMovieInfo={setMovieInfo}
-      // setType={setType}
+        setCurrentId={setCurrentId}
+        setShowTrailer={setShowTrailer}
       />}
-      {/* {movieInfo.show && <div className="bottom" />} */}
+      {showTrailer && <VideoPlayback trailer={trailer} setShowTrailer={setShowTrailer}/>}
     </div>
   );
 }
